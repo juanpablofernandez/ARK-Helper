@@ -1,26 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gya-IU-Qbv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="Ucg-O4-ZR7">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ark_Helper" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="gya-IU-Qbv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hwM-yN-aFt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fX7-YO-7TR" kind="relationship" relationship="rootViewController" id="Pec-Iu-7u0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="um4-LF-L3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-302" y="522"/>
+        </scene>
+        <!--Creatures-->
+        <scene sceneID="c87-8V-lQG">
+            <objects>
+                <tableViewController id="fX7-YO-7TR" customClass="DinosTableViewController" customModule="Ark_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" id="ag2-37-hzi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="115" id="HOE-50-8Qw" customClass="DinosTableViewCell" customModule="Ark_Helper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="115"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HOE-50-8Qw" id="3aK-uU-QVV">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="114"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hr-LK-dWw">
+                                            <rect key="frame" x="0.0" y="-1" width="600" height="115"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="2hr-LK-dWw" firstAttribute="height" secondItem="3aK-uU-QVV" secondAttribute="height" id="1fL-PR-EwF"/>
+                                        <constraint firstItem="2hr-LK-dWw" firstAttribute="centerX" secondItem="3aK-uU-QVV" secondAttribute="centerX" id="1km-cd-Xsx"/>
+                                        <constraint firstItem="2hr-LK-dWw" firstAttribute="width" secondItem="3aK-uU-QVV" secondAttribute="width" id="7Kh-w1-un6"/>
+                                        <constraint firstItem="2hr-LK-dWw" firstAttribute="centerY" secondItem="3aK-uU-QVV" secondAttribute="centerY" id="dsg-CA-xOm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dinoLabel" destination="2hr-LK-dWw" id="3Td-o7-hr5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fX7-YO-7TR" id="zdg-1T-Gm5"/>
+                            <outlet property="delegate" destination="fX7-YO-7TR" id="p6v-9v-rg2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Creatures" id="CSa-Ed-Jpz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ArO-Gx-XEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="371" y="522"/>
         </scene>
     </scenes>
 </document>

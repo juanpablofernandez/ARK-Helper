@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		69155D6A1D7355C30093B32B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69155D691D7355C30093B32B /* AppDelegate.swift */; };
-		69155D6C1D7355C30093B32B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69155D6B1D7355C30093B32B /* ViewController.swift */; };
 		69155D6F1D7355C30093B32B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69155D6D1D7355C30093B32B /* Main.storyboard */; };
 		69155D711D7355C30093B32B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69155D701D7355C30093B32B /* Assets.xcassets */; };
 		69155D741D7355C30093B32B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69155D721D7355C30093B32B /* LaunchScreen.storyboard */; };
+		69155D7C1D7357700093B32B /* DinosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69155D7B1D7357700093B32B /* DinosTableViewController.swift */; };
+		69155D7F1D7357990093B32B /* DinosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69155D7E1D7357990093B32B /* DinosTableViewCell.swift */; };
+		69155D821D735F2E0093B32B /* dino.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69155D811D735F2E0093B32B /* dino.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		69155D661D7355C30093B32B /* Ark Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ark Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69155D691D7355C30093B32B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		69155D6B1D7355C30093B32B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		69155D6E1D7355C30093B32B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69155D701D7355C30093B32B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69155D731D7355C30093B32B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69155D751D7355C30093B32B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69155D7B1D7357700093B32B /* DinosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DinosTableViewController.swift; path = ../DinosTableViewController.swift; sourceTree = "<group>"; };
+		69155D7E1D7357990093B32B /* DinosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinosTableViewCell.swift; sourceTree = "<group>"; };
+		69155D811D735F2E0093B32B /* dino.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dino.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		69155D681D7355C30093B32B /* Ark Helper */ = {
 			isa = PBXGroup;
 			children = (
+				69155D801D735F180093B32B /* Resources */,
 				69155D691D7355C30093B32B /* AppDelegate.swift */,
-				69155D6B1D7355C30093B32B /* ViewController.swift */,
 				69155D6D1D7355C30093B32B /* Main.storyboard */,
+				69155D7D1D7357820093B32B /* Dinos */,
 				69155D701D7355C30093B32B /* Assets.xcassets */,
 				69155D721D7355C30093B32B /* LaunchScreen.storyboard */,
 				69155D751D7355C30093B32B /* Info.plist */,
 			);
 			path = "Ark Helper";
+			sourceTree = "<group>";
+		};
+		69155D7D1D7357820093B32B /* Dinos */ = {
+			isa = PBXGroup;
+			children = (
+				69155D7B1D7357700093B32B /* DinosTableViewController.swift */,
+				69155D7E1D7357990093B32B /* DinosTableViewCell.swift */,
+			);
+			name = Dinos;
+			sourceTree = "<group>";
+		};
+		69155D801D735F180093B32B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				69155D811D735F2E0093B32B /* dino.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +146,7 @@
 			files = (
 				69155D741D7355C30093B32B /* LaunchScreen.storyboard in Resources */,
 				69155D711D7355C30093B32B /* Assets.xcassets in Resources */,
+				69155D821D735F2E0093B32B /* dino.plist in Resources */,
 				69155D6F1D7355C30093B32B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +158,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69155D6C1D7355C30093B32B /* ViewController.swift in Sources */,
 				69155D6A1D7355C30093B32B /* AppDelegate.swift in Sources */,
+				69155D7C1D7357700093B32B /* DinosTableViewController.swift in Sources */,
+				69155D7F1D7357990093B32B /* DinosTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +310,7 @@
 				69155D7A1D7355C30093B32B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
